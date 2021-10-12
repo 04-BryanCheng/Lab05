@@ -49,6 +49,10 @@ public class GameController : MonoBehaviour
             scorevalue += 10;
             ScoreText.text = "Coin: " + scorevalue;
             Destroy(collision.gameObject);
+            if (scorevalue == 60)
+            {
+                SceneManager.LoadScene("GameWin");
+            }
         }
         if (collision.gameObject.tag == "Water")
         {
