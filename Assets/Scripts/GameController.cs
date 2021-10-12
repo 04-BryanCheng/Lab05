@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         timeleft -= Time.deltaTime;
-        timeRemaining = Mathf.FloorToInt(timeleft % 60);
+        timeRemaining = Mathf.FloorToInt(timeleft % 20);
         TimerText.text = "Timer : " + timeRemaining.ToString();
 
         if (scorevalue == totalcoins)
@@ -49,14 +49,13 @@ public class GameController : MonoBehaviour
             scorevalue += 10;
             ScoreText.text = "Coin: " + scorevalue;
             Destroy(collision.gameObject);
-            if (scorevalue == 60)
+            if (scorevalue == 90)
             {
                 SceneManager.LoadScene("GameWin");
             }
         }
         if (collision.gameObject.tag == "Water")
         {
-            Debug.Log("It worked!");
             SceneManager.LoadScene("GameLose");
         }
     }

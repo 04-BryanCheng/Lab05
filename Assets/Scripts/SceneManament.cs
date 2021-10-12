@@ -15,4 +15,8 @@ public class SceneManament : MonoBehaviour
     {
         
     }
+    public void RestartOnClick()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
 }
