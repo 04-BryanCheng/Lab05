@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class CoinScript : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class SceneManament : MonoBehaviour
 {
-    public int speed;
-
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.left, speed * Time.deltaTime);
+        
     }
 }
